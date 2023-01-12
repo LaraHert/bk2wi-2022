@@ -26,7 +26,8 @@ export default {
   },
   data() {
     return {
-      isLoading: true
+      isLoading: true,
+      eventList: []
     }
   },
   mounted() {
@@ -34,6 +35,7 @@ export default {
      const store = useEventStore()
     store.loadEvents()
     this.eventList = store.getEventsBysportart(this.sportart)
+    console.log(this.eventList)
     this.isLoading = false
   },
 

@@ -13,7 +13,7 @@ export const useEventStore = defineStore({
     },
     getEventsBysportart: (state) => {
       return (sportartId) =>
-        state.eventList.find((event) => event.sportart.includes( sportartId));
+        state.eventList.find((event) => event.Sportart[0] === sportartId);//ToDo Filterung korrigieren
     },
   },
   actions: {
